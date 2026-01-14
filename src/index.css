@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #000000;
+  /* Negro */
+  --secondary-color: #212529;
+  /* Gris muy oscuro */
+  --accent-color: #dc3545;
+  /* Rojo (Original) */
+  --text-main: #ffffff;
+  /* Blanco puro */
+  --text-muted: #e9ecef;
+  /* Gris casi blanco para máxima visibilidad */
+  --bg-dark: #000000;
+  /* Fondo negro absoluto para máximo contraste */
+  --card-bg: rgba(33, 37, 41, 0.8);
+  --gold-accent: #dc3545;
+  /* Reemplazado por rojo para mantener origen */
+  --glass-bg: rgba(0, 0, 0, 0.85);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--text-main);
+  /* Asegurar que los títulos sean claros */
+}
+
+/* Forzar fuentes claras en elementos generales */
+p,
+span,
+div,
+label,
+input,
+select {
+  color: var(--text-main);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.small {
+  color: var(--text-muted);
+}
+
+.premium-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+}
+
+.btn-premium {
+  background-color: var(--accent-color) !important;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-premium:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(220, 53, 69, 0.4);
+  /* Sombra roja */
+  color: white;
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.glass-navbar {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Custom Range Sliders */
+.custom-range::-webkit-slider-thumb {
+  background: var(--accent-color) !important;
+  box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+  border: none;
+}
+
+.custom-range::-moz-range-thumb {
+  background: var(--accent-color) !important;
+  box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+  border: none;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 6px;
+}
+
+.custom-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
